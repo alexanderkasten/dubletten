@@ -2,10 +2,6 @@
 exports.__esModule = true;
 var isDirectory = require("is-directory");
 var fs = require("fs");
-test();
-function test() {
-    console.log('test');
-}
 function getDirs(path) {
     var found = fs.readdirSync(path);
     var files = [];
@@ -26,6 +22,6 @@ function getDirs(path) {
 }
 function logDirs() {
     var data = getDirs('test/');
-    console.log("ERG ", data);
+    console.log("Folders: ", data);
 }
 logDirs();

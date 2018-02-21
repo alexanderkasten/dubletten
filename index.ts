@@ -2,13 +2,7 @@ import { IDublette, IDublettenpruefung, Vergleichsmodi } from './contracts/index
 import * as isDirectory from 'is-directory';
 import * as fs from 'fs';
 
-test();
-
-function test():void {
-  console.log('test');
-}
-
-function getDirs(path){
+function getDirs(path): Array<string>{
   var found = fs.readdirSync(path);
   var files = [];
 
@@ -28,8 +22,9 @@ function getDirs(path){
   return files;
 }
 
-function logDirs(){
+function logDirs(): void {
   var data = getDirs('test/');
   console.log("Folders: ", data);
 }
+
 logDirs();
